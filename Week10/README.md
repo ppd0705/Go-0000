@@ -92,4 +92,24 @@ traceid: 使用city hash + uuid
 ### 经验和优化
 - 性能优化： 串行调用该并行、批量查询/写入
 
+
+## 监控
+
+### 4个黄金指标
+- 延迟 (耗时，需要区分正常还是异常)
+- 流量
+- 错误 （覆盖错误码或者HTTP Status Code）
+- 饱和度 (服务容量有多满)
+
+### 系统层面
+- CPU、Memory、IO、NetWork、Kernel ContextSwitch
+- Runtime: 各类GC
+
+### 统计
+Prometheus(拉模式)+ Granfana
+
+### 运行时分析
+- 线上打开Profiling端口，或者进一步提供web界面查看Profiling信息
+- watchdog:使用滑动窗口方式，当内存或CPU等信号量自动触发profiling采集并存储
+
 ## reference

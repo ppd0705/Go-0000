@@ -38,7 +38,8 @@ comet作为边缘节点部署在各地，和logic通过云vpc专线通信
 
 ### 唯一ID设计
 
-- UUID
+- UUID: 128bit
+  - v1 : 48bitMAC地址和60bit 时间戳
 - Snowflake: 时间戳(41bit)+机器ID(10bit)+序列化(12bit)
 - 基于步长向DB申请
 - 基于redis或DB自增方式申请
